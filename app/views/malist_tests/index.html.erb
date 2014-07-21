@@ -1,0 +1,29 @@
+<h1>Listing malist_tests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Attribut</th>
+      <th>Cabinet</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @malist_tests.each do |malist_test| %>
+      <tr>
+        <td><%= malist_test.content %></td>
+        <td><%= malist_test.attribut %></td>
+        <td><%= malist_test.cabinet %></td>
+        <td><%= link_to 'Show', malist_test %></td>
+        <td><%= link_to 'Edit', edit_malist_test_path(malist_test) %></td>
+        <td><%= link_to 'Destroy', malist_test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Malist test', new_malist_test_path %>
